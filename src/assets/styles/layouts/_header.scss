@@ -1,4 +1,7 @@
 .navbar {
     border-bottom: 1px solid $primary-color;
-    padding: 1rem 4rem;
+
+    @media (min-width: $mqMinWidth) {
+        padding: 1rem 3rem;
+    }
 }
