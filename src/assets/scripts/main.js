@@ -3,7 +3,20 @@
  * see commented examples below
  */
 
+import dirArticle from '../../views/article.html';
+import dirContact from '../../views/contact.html';
+import dirArtists from '../../views/artists.html';
+import dirHome from '../../views/home.html';
+
 import * as bootstrap from 'bootstrap';
+
+const vistas = {
+  article: dirArticle,
+  contact: dirContact,
+  artists: dirArtists,
+  home: dirHome
+};
+
 
 /**
  * Write any other JavaScript below
@@ -24,22 +37,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Función para cargar una vista dinámica
   const loadView = async (view) => {
-    console.log(view);
     try {
-      const response = await fetch(`./views/${view}.html`);
-      console.log(response);
+      const url = vistas[view]; 
+      const response = await fetch(url);
       if (!response.ok) throw new Error('No se pudo cargar la vista');
       const html = await response.text();
-      container.innerHTML = html; // Cargar el contenido HTML en el contenedor, me esta cargando index.html en lugar de la página que toca
+      container.innerHTML = html;
     } catch (err) {
       container.innerHTML = '<p>Error al cargar la vista.</p>';
-      console.error(err);
     }
   };
 
   // Función para manejar las rutas
   const handleRoute = () => {
     const hash = location.hash.slice(1) || 'home'; // Usar hash para definir la ruta, por defecto 'home'
+    // Eliminar clase 'active' de todos los enlaces
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.remove('active');
+    });
+    // Añadir clase 'active' al enlace correspondiente
+    const activeLink = document.querySelector(`.nav-link[href="#${hash}"]`);
+    if (activeLink) {
+      activeLink.classList.add('active');
+    }
+
     loadView(hash); // Cargar la vista correspondiente según el hash
   };
 

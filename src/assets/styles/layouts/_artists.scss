@@ -1,0 +1,47 @@
+.cards_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    container-type: inline-size;
+    gap: 8rem;
+
+    figure {
+        margin: 0;
+        
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+    
+        figcaption {
+          font-size: 0.75rem;
+          color: #666;
+          padding: 0.5rem 1rem;
+          background-color: #f0f0f0;
+        }
+    }
+
+    p {
+        padding: 0 1rem;
+    }
+
+    .card {
+        max-width: 370px;
+        flex: 1 1 100%;
+    }
+
+    @container (min-width: 600px) {
+        .card {
+          flex: 1 1 calc(50% - 1rem);
+        }
+    }
+      
+    @container (min-width: 900px) {
+        .card {
+            flex: 1 1 calc(33.333% - 1rem);
+        }
+    }
+}
+

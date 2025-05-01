@@ -30,7 +30,12 @@
  * It's a best practice to use a different partial for each page
  */
 
+@import "base/index";
+@import "layouts/header";
+@import "layouts/footer";
 @import "layouts/home";
+@import "layouts/artists";
+@import "state/state";
 
 /**
  * Do NOT include anything else in this file!
