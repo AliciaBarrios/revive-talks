@@ -1,0 +1,199 @@
+@layer layout {
+  .hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    overflow: hidden;
+  
+    .hero_img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+  
+    .hero_content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      margin: 1rem;
+      border-radius: 1rem;
+  
+      h1 {
+        color: white;
+      }
+  
+      .author {
+        font-size: 1rem;
+        font-style: italic;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    container-type: inline-size;
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      border-bottom: 1px solid $primary-color-light;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+
+      .intro_title {
+        color: $primary-color-light;
+      }
+
+      .intro_text {
+        font-size: 1.4rem;
+        margin: 0;
+      }
+    }
+
+    .list {
+      counter-reset: item;
+      list-style: none;
+      padding-left: 0;
+      border-bottom: 1px solid $primary-color-light;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    
+      .list_item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: justify;
+        position: relative;
+        padding-left: 3rem;
+        margin-bottom: 1.5rem;
+    
+        &::before {
+          counter-increment: item;
+          content: counter(item);
+          position: absolute;
+          left: 0;
+          top: 0.2rem;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          color: $primary-color-light;
+          border: 1px solid $primary-color-light;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .quote-section {
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: $secondary-color;
+      border-left: 6px solid $call-to-action-color;
+  
+      blockquote {
+        position: relative;
+        font-size: 2rem;
+        font-style: italic;
+        color: $call-to-action-color;
+        line-height: 1.5;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 1rem 2rem;
+  
+        &::before,
+        &::after {
+          font-size: 4rem;
+          color: lighten($call-to-action-color, 20%);
+          font-family: serif;
+          position: absolute;
+        }
+  
+        &::before {
+          content: "“";
+          top: -0.5rem;
+          left: -1rem;
+        }
+  
+        &::after {
+          content: "”";
+          bottom: -0.5rem;
+          right: -1rem;
+        }
+      }
+    }
+
+    .img-block {
+      max-width: 100%;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+      }
+    }
+    
+    .final-text {
+      display: flex;
+      align-items: center;
+      background-color: $secondary-color;
+      color: $call-to-action-color;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid $call-to-action-color;
+      border-radius: 0.5rem;
+      gap: 0.75rem;
+
+      i {
+        font-size: 1.5rem;
+        color: $call-to-action-color;
+      }
+    }
+
+    :is(blockquote, .final-text) {
+      font-weight: 600;
+    }
+
+    div:has(p) {
+      text-align: center;
+    }
+      
+    @container (min-width: 900px) {
+      .intro {
+        grid-template-columns: 2fr 2fr;
+      }
+
+      .img-block  {
+        width: 80%;
+      }
+    }
+
+    @include small-desktop {
+      width: 70%;
+    }
+  
+    @include big-desktop {
+      width: 60%;
+
+      .intro {
+        .intro_text {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+} 

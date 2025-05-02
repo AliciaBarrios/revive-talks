@@ -1,7 +1,10 @@
-.navbar {
-    border-bottom: 1px solid $primary-color;
-
-    @media (min-width: $mqMinWidth) {
-        padding: 1rem 3rem;
+@layer component {
+    .navbar {
+        border-bottom: 1px solid $primary-color-light;
+    
+        @media (min-width: $mqMinWidth) {
+            padding: 2rem 3rem;
+        }
     }
 }
+

@@ -3,6 +3,8 @@
  * Do not include SCSS code in this file.
  */
 
+@layer bootstrap, base, component, layout, state;
+
 /**
  * Import variables
  */
@@ -23,19 +25,35 @@
  * see commented examples below
  */
 
-@import "bootstrap/scss/bootstrap";
+ @layer bootstrap {
+    @import "bootstrap/scss/bootstrap";
+ }
 
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
-@import "base/index";
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/home";
-@import "layouts/artists";
-@import "state/state";
+ @layer base {
+    @import 'base/index';
+}
+
+@layer component {
+    @import "layouts/header";
+    @import "layouts/footer";
+}
+
+@layer layout {
+    @import "layouts/home";
+    @import "layouts/artists";
+    @import "layouts/article";
+}
+
+@import "layouts/contact";
+
+@layer state {
+    @import "state/state";
+}
 
 /**
  * Do NOT include anything else in this file!

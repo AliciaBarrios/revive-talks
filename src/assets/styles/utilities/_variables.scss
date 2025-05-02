@@ -1,16 +1,29 @@
 @use "sass:color";
 
+
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+"Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $uoc-corporate: #000078;
 $uoc-masterbrand: #73edff;
-$primary-color: #4CAF50;
-$secondary-color: #A5C882;
+$primary-color-light: #6a994e;
+$primary-color-dark: #2a5031;
+$secondary-color: #fff3db;
 $bg-color: #FAFAFA;
 $text-color: #333333;
 $call-to-action-color: #F4A261;
 
 $mqMinWidth: 769px;
+
+// Customizando variables de Bootstrap
+$theme-colors: (
+ "primary": $primary-color-dark,
+ "danger": $call-to-action-color
+);
+
+$nav-pills-link-active-bg: $primary-color-dark;
+$nav-link-color: $primary-color-dark;
+
+
