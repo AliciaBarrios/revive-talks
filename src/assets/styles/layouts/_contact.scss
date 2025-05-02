@@ -94,6 +94,14 @@
       color: #666;
     }
 
+    .accordion-button:not(.collapsed) {
+      font-weight: bold;
+
+      &::after {
+        filter: brightness(0) invert(1); 
+      }
+    }
+
     @include big-desktop {
         flex-direction: row;
         justify-content: space-around;

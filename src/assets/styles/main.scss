@@ -16,8 +16,10 @@
  * Import modules
  */
 
- @import "modules/buttons";
- @import "modules/cards";
+ @layer component {
+    @import "modules/header";
+    @import "modules/footer";
+}
 
 /**
  * Import npm dependencies
@@ -36,11 +38,6 @@
 
  @layer base {
     @import 'base/index';
-}
-
-@layer component {
-    @import "layouts/header";
-    @import "layouts/footer";
 }
 
 @layer layout {

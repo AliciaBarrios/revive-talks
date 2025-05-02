@@ -25,11 +25,7 @@ const vistas = {
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
-
+// Función para cargar una vista dinámica
 window.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.views-container');
 
@@ -64,6 +60,17 @@ window.addEventListener('DOMContentLoaded', () => {
       activeLink.classList.add('active');
     }
 
+    // Añadir o quitar clase al footer según la vista
+    const footerLinks = document.querySelectorAll('footer a');
+    footerLinks.forEach(link => {
+      if (hash === 'home') {
+        link.classList.add('footer-links--color');
+      } else {
+        link.classList.remove('footer-links--color');
+      }
+    });
+
+
     loadView(hash); // Cargar la vista correspondiente según el hash
   };
 
@@ -73,5 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Cargar la vista inicial
   handleRoute();
 });
+
+
 
 
