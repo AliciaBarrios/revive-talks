@@ -3,6 +3,9 @@
  * see commented examples below
  */
 
+import lightbox from 'lightbox2';
+import 'lightbox2/dist/css/lightbox.min.css';
+
 import dirArticle from '../../views/article.html';
 import dirContact from '../../views/contact.html';
 import dirArtists from '../../views/artists.html';
