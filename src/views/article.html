@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>UOC Boilerplate</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <article class="article-page">
+      <header class="hero">
+          <img src="../assets/images/articulo-1.jpg" alt="Persona participando en un taller" class="hero__img" />
+          <div class="hero__content">
+            <h1>Economía Circular y su impacto en la comunidad</h1>
+            <p class="author">Por el equipo ReVive Talks</p>
+          </div>
+      </header>
+    
+      <main class="content main-container">
+        <section class="intro">
+          <h2 class="intro__title">¿Qué es la economía circular?</h2>
+          <p class="intro__text">
+            Es una estrategia de producción y consumo que promueve el uso eficiente de recursos.
+            Implica compartir, reutilizar, reparar, renovar y reciclar materiales y productos existentes para darles una segunda vida.
+          </p>
+        </section>
+        
+        <section class="list">
+          <ol>
+            <li class="list__item">
+              <h3>Rediseñar productos pensando en su reutilización y desmontaje</h3>
+              <p>
+                Implica diseñar productos desde su concepción para que puedan desmontarse fácilmente, facilitando la reparación, la actualización de 
+                componentes o el reciclaje al final de su vida útil. Esto reduce los residuos y alarga la vida del producto. Por ejemplo, usar tornillos 
+                en lugar de pegamento permite cambiar una pieza defectuosa sin desechar todo el objeto. También implica seleccionar materiales reciclables 
+                y modulares, y evitar mezclas de materiales que dificulten su recuperación.
+              </p>
+            </li>
+            <li class="list__item">
+              <h3>Fomentar la colaboración entre empresas para compartir recursos</h3>
+              <p>
+                Consiste en establecer sinergias entre organizaciones para intercambiar materiales, energía o infraestructuras. Un ejemplo sería una empresa 
+                que reutiliza los residuos de otra como materia prima, lo que se conoce como simbiosis industrial. Esta cooperación reduce costes, minimiza el 
+                impacto ambiental y promueve cadenas de suministro más eficientes. También puede aplicarse al uso compartido de espacios o equipos, optimizando 
+                su uso y reduciendo la necesidad de nuevas inversiones.
+              </p>
+            </li>
+            <li class="list__item">
+                <h3>Implementar plataformas de intercambio y reutilización a nivel local</h3>
+                <p>
+                    Desarrollar redes o aplicaciones que permitan a ciudadanos y empresas donar, intercambiar o vender productos que aún tienen valor 
+                    pero ya no usan. Esto ayuda a mantener los productos en circulación durante más tiempo, evita la generación de residuos y fomenta el consumo 
+                    responsable. Además, fortalece la economía local al incentivar el consumo de segunda mano y reduce la presión sobre la extracción de nuevos recursos.
+                </p>
+            </li>
+          </ol>
+        </section>
+    
+        <section class="quote-section">
+          <blockquote>
+            Una economía circular no es una opción, es una necesidad para preservar el planeta.
+          </blockquote>
+        </section>
+    
+        <section>
+          <h3><strong>Participación ciudadana</strong></h3>
+          <p>
+              La ciudadanía desempeña un papel clave en la transición hacia una economía circular. Cada gesto cuenta: elegir productos duraderos, 
+              reducir el consumo innecesario o apostar por la reparación y reutilización son acciones con un gran impacto colectivo. 
+          </p>
+          <p>
+              Durante las jornadas se ofrecerán espacios para el aprendizaje activo, como talleres prácticos donde las personas asistentes podrán descubrir 
+              cómo reparar pequeños electrodomésticos, confeccionar objetos útiles a partir de materiales reciclados o dar una nueva vida a objetos cotidianos.
+          </p>
+          <p>
+              En la edición anterior se llevó a cabo un taller muy especial que combinaba la reutilización de materiales con el arte urbano. Se utilizó un contenedor 
+              como instalación artística, decorado con hilos y papeles reciclados en los que las y los participantes colgaron sus propias creaciones visuales. 
+              Esta experiencia colectiva no solo fomentó la creatividad y el trabajo manual, sino que también sirvió como símbolo del valor de transformar residuos en 
+              expresión artística y mensaje social.
+          </p>
+        </section>
+    
+        <figure class="img-block">
+          <img src="../assets/images/articulo-2.jpg" alt="Imagen del taller de reutilización" />
+          <figcaption>
+              Imagen del taller de reutilización del año pasado.
+              Foto de <a href="https://unsplash.com/es/@designcrft?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Courtney Vitale</a> en <a href="https://unsplash.com/es/fotos/una-maleta-verde-de-la-que-cuelgan-cuadros-1FJGw4KXGkU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+          </figcaption>
+        </figure>
+    
+        <section class="final-section">
+          <i class="fa-solid fa-calendar-days"></i>
+          <p class="final-section__text">Las jornadas se celebran del 10 al 12 de mayo, con actividades gratuitas para todos los públicos.</p>
+        </section>
+      </main>
+    </article>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="../assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

@@ -8,75 +8,39 @@ import 'lightbox2/dist/css/lightbox.min.css';
 
 import * as bootstrap from 'bootstrap';
 
-const vistas = {
-  article: './article.html',
-  contact: './contact.html',
-  artists: './artists.html',
-  home: './home.html'
-};
+(() => {
+  const pathname = window.location.pathname;
+  const page = pathname.split('/').pop().replace('.html', '') || 'index';
 
+  // 1. Añadir clase al <body> según la página
+  document.body.classList.add(`page-${page}`);
 
-/**
- * Write any other JavaScript below
- */
-
-// Función para cargar una vista dinámica
-window.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.views-container');
-
-  if (!container) {
-    console.error('No se encontró el contenedor .views-container');
-    return;
-  }
-
-  // Función para cargar una vista dinámica
-  const loadView = async (view) => {
-    try {
-      const url = vistas[view]; 
-      const response = await fetch(url);
-      if (!response.ok) throw new Error('No se pudo cargar la vista');
-      const html = await response.text();
-      container.innerHTML = html;
-    } catch (err) {
-      container.innerHTML = '<p>Error al cargar la vista.</p>';
+  // 2. Marcar como activa la opción del menú correspondiente
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && pathname.endsWith(href)) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active'); // Asegura que solo uno esté activo
     }
-  };
+  });
 
-  // Función para manejar las rutas
-  const handleRoute = () => {
-    const hash = location.hash.slice(1) || 'home'; // Usar hash para definir la ruta, por defecto 'home'
-    // Eliminar clase 'active' de todos los enlaces
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.classList.remove('active');
-    });
-    // Añadir clase 'active' al enlace correspondiente
-    const activeLink = document.querySelector(`.nav-link[href="#${hash}"]`);
-    if (activeLink) {
-      activeLink.classList.add('active');
+  // 3. Añadir clase al footer solo si estás en la página de inicio
+  const footerLinks = document.querySelectorAll('footer a');
+  footerLinks.forEach(link => {
+    if (page === 'index') {
+      link.classList.add('footer-links--color');
+    } else {
+      link.classList.remove('footer-links--color');
     }
-
-    // Añadir o quitar clase al footer según la vista
-    const footerLinks = document.querySelectorAll('footer a');
-    footerLinks.forEach(link => {
-      if (hash === 'home') {
-        link.classList.add('footer-links--color');
-      } else {
-        link.classList.remove('footer-links--color');
-      }
-    });
+  });
+})();
 
 
-    loadView(hash); // Cargar la vista correspondiente según el hash
-  };
-
-  // Añadir evento para cuando el hash cambie
-  window.addEventListener('hashchange', handleRoute);
-
-  // Cargar la vista inicial
-  handleRoute();
-});
-
-
-
+//Función onclick redirección
+window.redirect = function(page) {
+  window.location.href=`${page}`;
+}
 
 

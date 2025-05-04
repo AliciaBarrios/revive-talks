@@ -5,7 +5,7 @@
   "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
   "scripts": {
     "parcel:serve": "parcel -p 8123 --target web --open",
-    "parcel:build": "parcel build --target web --no-source-maps --no-cache --public-url ./",
+    "parcel:build": "parcel build --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
@@ -15,7 +15,7 @@
     "web": {
       "context": "browser",
       "publicUrl": "./",
-      "source": "src/index.html",
+      "source": "src/views/index.html",
       "engines": {
         "browsers": "last 2 versions, > 0.5%, not dead"
       }
