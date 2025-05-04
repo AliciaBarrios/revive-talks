@@ -8,7 +8,8 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $primary-color-light: #6a994e;
 $primary-color-dark: #2a5031;
-$secondary-color: #fff3db;
+$secondary-color-light: #fff3db;
+$secondary-color-dark: #d4a373;
 $bg-color: #FAFAFA;
 $text-color: #333333;
 $call-to-action-color: #F4A261;
@@ -26,7 +27,7 @@ $nav-link-color: $primary-color-dark;
 
 $accordion-button-bg: $bg-color;
 $accordion-button-active-color: $bg-color;
-$accordion-button-active-bg: mix($secondary-color, #d4a373, 50%);
+$accordion-button-active-bg: mix($secondary-color-light, #d4a373, 50%);
 
 // Cambiar el color del borde del acordeón
 $accordion-border-color: #cccccc;

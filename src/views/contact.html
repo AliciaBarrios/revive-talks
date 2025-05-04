@@ -5,28 +5,28 @@
         <h1>Contacto</h1>
         <p>¿Tienes dudas, propuestas o quieres colaborar? Escríbenos:</p>
 
-        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+        <form name="contact" method="POST" data-netlify="true" class="form">
             <input type="hidden" name="form-name" value="contact" />
-
-            <label>
-            Nombre
-            <input type="text" name="name" required />
+            
+            <label class="form__label">
+                Nombre
+                <input type="text" name="name" required class="form__input"/>
             </label>
 
-            <label>
-            Email
-            <input type="email" name="email" required />
+            <label class="form__label">
+                Email
+                <input type="email" name="email" required class="form__input" />
             </label>
 
-            <label>
-            Mensaje
-            <textarea name="message" rows="5" required></textarea>
+            <label class="form__label">
+                Mensaje
+                <textarea name="message" rows="5" required class="form__input"></textarea>
             </label>
 
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary form__button">Enviar</button>
         </form>
 
-        <p class="info-extra">Te responderemos lo antes posible. ¡Gracias por tu interés!</p>
+        <p class="extra-info">Te responderemos lo antes posible. ¡Gracias por tu interés!</p>
     </div>
 
     <div class="accordion overlay" id="accordionExample">

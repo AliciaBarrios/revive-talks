@@ -1,5 +1,5 @@
 @layer layout {
-    .cards_container {
+    .cards-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -7,34 +7,24 @@
         container-type: inline-size;
         gap: 3rem 6rem;
 
-        h2 {
-            color: $primary-color-dark;
-        }
-    
-        figure {
-            margin: 0;
-            
-            img {
-              display: block;
-              width: 100%;
-              height: auto;
-            }
-        
-            figcaption {
-              font-size: 0.75rem;
-              color: #666;
-              padding: 0.5rem 1rem;
-              background-color: #f0f0f0;
-            }
-        }
-    
-        p {
-            padding: 0 1rem;
-        }
-    
         .card {
             max-width: 380px;
             flex: 1 1 100%;
+    
+            .card__image {
+                margin: 0;
+
+                figcaption {
+                font-size: 0.75rem;
+                color: #666;
+                padding: 0.5rem 1rem;
+                background-color: #f0f0f0;
+                }
+            }
+
+            .card__subtitle {
+                color: $secondary-color-dark;
+            }
         }
     
         @container (min-width: 600px) {
