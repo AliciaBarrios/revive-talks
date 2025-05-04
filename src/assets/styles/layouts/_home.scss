@@ -1,72 +1,71 @@
 .home-page {
-    min-height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  
-    .home-page_image {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: z(background);
-    }
-  
-    .home-page_content {
-        // Fallback para navegadores que no soportan CSS Grid
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 2rem;
-    }
-  
-    .title {
+    height: 100%;
+    object-fit: cover;
+    z-index: z(background);
+  }
+
+  .content {
+    // Fallback para navegadores que no soportan CSS Grid
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+
+    .content__title {
       grid-area: titulo;
     }
   
-    .comentarios {
-        // Fallback para navegadores que no soportan CSS Grid
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 2rem;
-    }
+    .content__comentarios {
+      // Fallback para navegadores que no soportan CSS Grid
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+
+      .comentario {
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        font-style: italic;
+        position: relative;
+        transition: transform 0.3s ease;
+        width: 100%;
+        height: fit-content;
   
-    .comentario {
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-      font-style: italic;
-      position: relative;
-      transition: transform 0.3s ease;
-      width: 100%;
-      height: fit-content;
+        &:hover {
+          transform: rotate(0deg);
+        }
   
-      &:hover {
-        transform: rotate(0deg);
+        .comentario__nombre {
+          font-weight: bold;
+          margin-top: 0.5rem;
+          display: block;
+          text-align: right;
+        }
       }
   
-      .comentario_nombre {
-        font-weight: bold;
-        margin-top: 0.5rem;
-        display: block;
-        text-align: right;
-      }
+      .comentario-1 { grid-area: comentario-1; background-color: color(display-p3 1 0.85 0.6 / 0.75); transform: rotate(-3deg); }
+      .comentario-2 { grid-area: comentario-2; background-color: color(display-p3 1 1 1 / 0.75); transform: rotate(2deg); }
+      .comentario-3 { grid-area: comentario-3; background-color: color(display-p3 0.7 0.85 1 / 0.75); transform: rotate(-2deg); }
+      .comentario-4 { grid-area: comentario-4; background-color: color(display-p3 0.8367 0.99 0.76 / 0.75); transform: rotate(3deg); }
+      .comentario-5 { grid-area: comentario-5; background-color: color(display-p3 0.98 0.75 0.75 / 0.75); transform: rotate(-1deg); }
+      .comentario-6 { grid-area: comentario-6; background-color: color(display-p3 0.97 0.9375 0.58/ 0.75); transform: rotate(1deg); }
+      .comentario-7 { grid-area: comentario-7; background-color: color(display-p3 0.9467 0.77 0.97/ 0.75); transform: rotate(-2deg); }
     }
-  
-    .comentario-1 { grid-area: comentario-1; background-color: color(display-p3 1 0.85 0.6 / 0.75); transform: rotate(-3deg); }
-    .comentario-2 { grid-area: comentario-2; background-color: color(display-p3 1 1 1 / 0.75); transform: rotate(2deg); }
-    .comentario-3 { grid-area: comentario-3; background-color: color(display-p3 0.7 0.85 1 / 0.75); transform: rotate(-2deg); }
-    .comentario-4 { grid-area: comentario-4; background-color: color(display-p3 0.8367 0.99 0.76 / 0.75); transform: rotate(3deg); }
-    .comentario-5 { grid-area: comentario-5; background-color: color(display-p3 0.98 0.75 0.75 / 0.75); transform: rotate(-1deg); }
-    .comentario-6 { grid-area: comentario-6; background-color: color(display-p3 0.97 0.9375 0.58/ 0.75); transform: rotate(1deg); }
-    .comentario-7 { grid-area: comentario-7; background-color: color(display-p3 0.9467 0.77 0.97/ 0.75); transform: rotate(-2deg); }
-  
+
     .cita {
       grid-area: cita;
       font-size: 1.5rem;
@@ -74,49 +73,49 @@
       color: $call-to-action-color;
       margin-top: 2rem;
     }
-  
-    .button {
-        grid-area: button;
-        margin-top: 2rem;
-        background-color: $secondary-color;
-        color: $text-color;
-        padding: 0.8rem 1.5rem;
-        text-decoration: none;
-        border-radius: 10px;
-        font-weight: bold;
-        border: none;
-        display: inline-block;
-        transition: background-color 0.3s ease, color 0.8s ease; 
-    }
 
-    .button:hover {
+    .button {
+      grid-area: button;
+      margin-top: 2rem;
+      background-color: $secondary-color;
+      color: $text-color;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      border: none;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.8s ease; 
+
+      &:hover {
         background-color: hwb(30 45% 17%); 
         color: hwb(0 100% 0%); 
+      }
     }
+  }
 }
 
 @supports (display: grid) {
-    .home-page .home-page_content {
-      display: grid;
-      grid-template-areas:
-        "titulo"
-        "comentarios"
-        "cita"
-        "button";
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      justify-items: center;
-      align-items: center;
-      text-align: center;
-      color: $text-color;
-      z-index: z(content);
-      padding: 2rem;
-      width: 100%;
-      container-type: inline-size;
-      container-name: home;
-    }
-  
-    .home-page .comentarios {
+  .home-page .content {
+    display: grid;
+    grid-template-areas:
+      "titulo"
+      "comentarios"
+      "cita"
+      "button";
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: $text-color;
+    z-index: z(content);
+    padding: 2rem;
+    width: 100%;
+    container-type: inline-size;
+    container-name: home;
+
+    .content__comentarios {
       display: grid;
       grid-template-areas:
         "comentario-1"
@@ -132,28 +131,25 @@
       max-width: 1600px;
       justify-items: center;
     }
+  }
 }
 
 @container home (min-width: 900px) {
-    .home-page {
+  .home-page .content .content__comentarios {
+    // Fallback para navegadores que no soportan CSS Grid
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-
-        .comentarios {
-            // Fallback para navegadores que no soportan CSS Grid
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
+  @supports (display: grid) {
+    .home-page .content .content__comentarios {
+      display: grid;
+      grid-template-areas:
+      "comentario-1 comentario-2 ."
+      "comentario-4 comentario-5 comentario-6"
+      "comentario-7 . comentario-3";
+      grid-template-columns: repeat(3, 1fr);
     }
-
-    @supports (display: grid) {
-        .home-page .comentarios {
-            display: grid;
-            grid-template-areas:
-            "comentario-1 comentario-2 ."
-            "comentario-4 comentario-5 comentario-6"
-            "comentario-7 . comentario-3";
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
+  }
 }
