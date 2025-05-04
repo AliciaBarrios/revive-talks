@@ -9,10 +9,10 @@ import 'lightbox2/dist/css/lightbox.min.css';
 import * as bootstrap from 'bootstrap';
 
 const vistas = {
-  article: './views/article.html',
-  contact: './views/contact.html',
-  artists: './views/artists.html',
-  home: './views/home.html'
+  article: './article.html',
+  contact: './contact.html',
+  artists: './artists.html',
+  home: './home.html'
 };
 
 
