@@ -1,0 +1,13 @@
+@function z($layer) {
+    $z-layers: (
+      background: -1,
+      content: 10,
+      overlay: 20,
+      modal: 30,
+      tooltip: 40
+    );
+  
+    @return map-get($z-layers, $layer);
+}
+  
+  
