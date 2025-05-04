@@ -6,18 +6,13 @@
 import lightbox from 'lightbox2';
 import 'lightbox2/dist/css/lightbox.min.css';
 
-import dirArticle from '../../views/article.html';
-import dirContact from '../../views/contact.html';
-import dirArtists from '../../views/artists.html';
-import dirHome from '../../views/home.html';
-
 import * as bootstrap from 'bootstrap';
 
 const vistas = {
-  article: dirArticle,
-  contact: dirContact,
-  artists: dirArtists,
-  home: dirHome
+  article: require('../../views/article.html'),
+  contact: require('../../views/contact.html'),
+  artists: require('../../views/artists.html'),
+  home: require('../../views/home.html')
 };
 
 
@@ -80,6 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Cargar la vista inicial
   handleRoute();
 });
+
 
 
 
