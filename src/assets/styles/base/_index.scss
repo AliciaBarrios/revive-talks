@@ -26,7 +26,7 @@
         margin: 3rem auto;
         text-align: center;
     
-        @media (min-width: $mqMinWidth) {
+        @include tablet {
             width: 85%;
         }
     }
@@ -36,7 +36,7 @@
         margin: 2rem 0;
         color: $primary-color-light;
     
-        @media (min-width: $mqMinWidth) {
+        @include tablet {
             font-size: 3.5rem;
         }
     }
@@ -44,14 +44,14 @@
     h2 {
         font-size: 1.6rem;
         margin: 1rem 0;
-        @media (min-width: $mqMinWidth) {
+        @include tablet {
             font-size: 2rem;
         }
     }
 
     h3 {
         font-size: 1.4rem;
-        @media (min-width: $mqMinWidth) {
+        @include tablet {
             font-size: 1.5rem;
         }
     }

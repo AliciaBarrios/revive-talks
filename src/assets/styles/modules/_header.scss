@@ -2,7 +2,7 @@
     .navbar {
         border-bottom: 1px solid $primary-color-light;
     
-        @media (min-width: $mqMinWidth) {
+        @include tablet {
             padding: 2rem 3rem;
         }
     }

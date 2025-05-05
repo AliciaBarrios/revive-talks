@@ -1,6 +1,5 @@
 @use "sass:color";
 
-
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 "Segoe UI Symbol";
@@ -14,17 +13,17 @@ $bg-color: #FAFAFA;
 $text-color: #333333;
 $call-to-action-color: #F4A261;
 
-$mqMinWidth: 769px;
-
 // Customizando variables de Bootstrap
 $theme-colors: (
  "primary": $primary-color-dark,
  "danger": $call-to-action-color
 );
 
+// Cambiar colores navbar
 $nav-pills-link-active-bg: $primary-color-dark;
 $nav-link-color: $primary-color-dark;
 
+// Cambiar colores acordeón
 $accordion-button-bg: $bg-color;
 $accordion-button-active-color: $bg-color;
 $accordion-button-active-bg: mix($secondary-color-light, #d4a373, 50%);
