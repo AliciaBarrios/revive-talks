@@ -73,17 +73,12 @@
       margin-top: 2rem;
     }
 
-    .button {
+    .btn {
       grid-area: button;
       margin-top: 2rem;
-      background-color: $secondary-color-light;
-      color: $text-color;
       padding: 0.8rem 1.5rem;
-      text-decoration: none;
-      border-radius: 10px;
       font-weight: bold;
       border: none;
-      display: inline-block;
       transition: background-color 0.3s ease, color 0.8s ease; 
 
       &:hover {

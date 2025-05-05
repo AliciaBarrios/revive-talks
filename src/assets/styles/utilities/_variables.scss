@@ -16,6 +16,8 @@ $call-to-action-color: #F4A261;
 // Customizando variables de Bootstrap
 $theme-colors: (
  "primary": $primary-color-dark,
+ "secondary": $secondary-color-light,
+ "success": $primary-color-light,
  "danger": $call-to-action-color
 );
 
