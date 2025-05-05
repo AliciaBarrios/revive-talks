@@ -1,42 +1,45 @@
 @layer layout {
-    .cards-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        container-type: inline-size;
-        gap: 3rem 6rem;
 
-        .card {
-            max-width: 380px;
-            flex: 1 1 100%;
-    
-            .card__image {
-                margin: 0;
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem 6rem;
+    justify-content: center;
+    container-type: inline-size;
 
-                figcaption {
-                font-size: 0.75rem;
-                color: #666;
-                padding: 0.5rem 1rem;
-                background-color: #f0f0f0;
-                }
-            }
+    .card {
+      flex: 1 1 100%;
+      max-width: 380px;
 
-            .card__subtitle {
-                color: $secondary-color-dark;
-            }
+      .card__image {
+        margin: 0;
+
+        figcaption {
+          padding: 0.5rem 1rem;
+          font-size: 0.75rem;
+          color: #666;
+          background-color: #f0f0f0;
         }
-    
-        @container (min-width: 600px) {
-            .card {
-              flex: 1 1 calc(50% - 1rem);
-            }
-        }
-          
-        @container (min-width: 900px) {
-            .card {
-                flex: 1 1 calc(33.333% - 1rem);
-            }
-        }
-    }    
+      }
+
+      .card__subtitle {
+        color: $secondary-color-dark;
+      }
+    }
+
+    @container (min-width: 600px) {
+
+      .card {
+        flex: 1 1 calc(50% - 1rem);
+      }
+    }
+
+    @container (min-width: 900px) {
+
+      .card {
+        flex: 1 1 calc(33.333% - 1rem);
+      }
+    }
+  }
 }

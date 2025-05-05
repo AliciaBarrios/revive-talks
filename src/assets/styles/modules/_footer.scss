@@ -1,35 +1,34 @@
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+
+  .navbar {
+    padding: 1rem 0;
+    border-top: 1px solid $primary-color-light;
+    border-bottom: 0;
+
+    @include tablet {
+      width: 85vw;
+      padding: 0.5rem 0;
+    }
+  }
+
+  .container-fluid {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    justify-content: center;
 
-    .navbar {
-        border-bottom: 0;
-        border-top: 1px solid $primary-color-light;
-        padding: 1rem 0;
-
-        @include tablet {
-            width: 85vw;
-            padding: 0.5rem 0;
-        }
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
     }
+  }
 
-    .container-fluid {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    }
-
-    a:has(i) {
-        color: $primary-color-dark;
-    }
-} 
-  
+  a:has(i) {
+    color: $primary-color-dark;
+  }
+}

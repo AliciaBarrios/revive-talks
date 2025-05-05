@@ -17,9 +17,9 @@
  * Import modules
  */
 
- @layer component {
-    @import "modules/header";
-    @import "modules/footer";
+@layer component {
+  @import "modules/header";
+  @import "modules/footer";
 }
 
 /**
@@ -28,29 +28,29 @@
  * see commented examples below
  */
 
- @layer bootstrap {
-    @import "bootstrap/scss/bootstrap";
- }
+@layer bootstrap {
+  @import "bootstrap/scss/bootstrap";
+}
 
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
- @layer base {
-    @import 'base/index';
+@layer base {
+  @import "base/index";
 }
 
 @layer layout {
-    @import "layouts/home";
-    @import "layouts/artists";
-    @import "layouts/article";
+  @import "layouts/home";
+  @import "layouts/artists";
+  @import "layouts/article";
 }
 
 @import "layouts/contact";
 
 @layer state {
-    @import "state/state";
+  @import "state/state";
 }
 
 /**
