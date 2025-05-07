@@ -22,7 +22,7 @@ import * as bootstrap from 'bootstrap';
     if (href && pathname.endsWith(href)) {
       link.classList.add('active');
     } else {
-      link.classList.remove('active'); // Asegura que solo uno esté activo
+      link.classList.remove('active');
     }
   });
 

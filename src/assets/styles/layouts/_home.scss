@@ -19,18 +19,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
+    width: 100%;
     padding: 2rem;
+    color: $text-color;
     text-align: center;
-
-    .content__title {
-      grid-area: titulo;
-    }
+    container-type: inline-size;
+    container-name: home;
 
     .content__comentarios {
       // Fallback para navegadores que no soportan CSS Grid
       display: flex;
       flex-direction: column;
+      gap: 2rem 5rem;
       align-items: center;
+      justify-items: center;
+      width: 100%;
+      max-width: 1600px;
       padding: 2rem;
       text-align: center;
 
@@ -57,7 +62,6 @@
       }
 
       .comentario-1 {
-        grid-area: comentario-1;
         background-color: color(display-p3 1 0.85 0.6 / 0.75);
         transform: rotate(-3deg);
       }
@@ -100,7 +104,6 @@
     }
 
     .cita {
-      grid-area: cita;
       margin-top: 2rem;
       font-size: 1.5rem;
       font-style: italic;
@@ -108,7 +111,6 @@
     }
 
     .btn {
-      grid-area: button;
       padding: 0.8rem 1.5rem;
       margin-top: 2rem;
       font-weight: bold;
@@ -135,14 +137,18 @@
       "button";
     grid-template-columns: 1fr;
     gap: 2rem;
-    align-items: center;
-    justify-items: center;
-    width: 100%;
-    padding: 2rem;
-    color: $text-color;
-    text-align: center;
-    container-type: inline-size;
-    container-name: home;
+
+    .content__title {
+      grid-area: titulo;
+    }
+
+    .cita {
+      grid-area: cita;
+    }
+
+    .btn {
+      grid-area: button;
+    }
 
     .content__comentarios {
       display: grid;
@@ -155,10 +161,34 @@
         "comentario-6"
         "comentario-7";
       grid-template-columns: 1fr;
-      gap: 2rem 5rem;
-      justify-items: center;
-      width: 100%;
-      max-width: 1600px;
+
+      .comentario-1 {
+        grid-area: comentario-1;
+      }
+
+      .comentario-2 {
+        grid-area: comentario-2;
+      }
+
+      .comentario-3 {
+        grid-area: comentario-3;
+      }
+
+      .comentario-4 {
+        grid-area: comentario-4;
+      }
+
+      .comentario-5 {
+        grid-area: comentario-5;
+      }
+
+      .comentario-6 {
+        grid-area: comentario-6;
+      }
+
+      .comentario-7 {
+        grid-area: comentario-7;
+      }
     }
   }
 }
