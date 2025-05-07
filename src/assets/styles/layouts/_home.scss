@@ -161,6 +161,7 @@
         "comentario-6"
         "comentario-7";
       grid-template-columns: 1fr;
+      grid-area: comentarios;
 
       .comentario-1 {
         grid-area: comentario-1;
