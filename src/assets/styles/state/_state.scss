@@ -1,7 +1,9 @@
-.card__subtitle--bold {
-  font-weight: 700;
-}
+@layer state {
+  .card__subtitle--bold {
+    font-weight: 700;
+  }
 
-.footer-links--color {
-  color: white;
+  .footer-links--color {
+    color: white;
+  }
 }

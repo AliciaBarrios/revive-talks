@@ -16,7 +16,6 @@
   }
 
   @container (min-width: 600px) {
-
     .background-image {
       position: absolute;
       top: 0;
@@ -36,30 +35,28 @@
     z-index: z(overlay);
     width: 100%;
     max-width: 600px;
-    padding: 4svh 4lvw;
+    padding: 4cqh 4cqw;
     background-color: color.adjust($bg-color, $alpha: -0.25);
     border-radius: 1rem;
-
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
   }
 
   p {
-    margin-bottom: 4svh;
+    margin-bottom: 4cqh;
     text-align: center;
   }
 
   .form {
     display: flex;
     flex-direction: column;
-    gap: 2svh;
+    gap: 2cqh;
 
     .form__label {
       display: flex;
       flex-direction: column;
       font-size: 1rem;
       font-weight: bold;
-
 
       .form__input {
         width: 100%;
@@ -92,7 +89,7 @@
   }
 
   .extra-info {
-    margin-top: 4svh;
+    margin-top: 4cqh;
     font-size: 0.9rem;
     color: #666;
     text-align: center;

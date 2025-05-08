@@ -1,5 +1,4 @@
 @layer layout {
-
   .cards-container {
     display: flex;
     flex-direction: row;
@@ -30,14 +29,12 @@
     }
 
     @container cards (min-width: 600px) {
-
       .card {
         flex: 1 1 calc(50% - 1rem);
       }
     }
 
     @container cards (min-width: 900px) {
-
       .card {
         flex: 1 1 calc(33.333% - 1rem);
       }

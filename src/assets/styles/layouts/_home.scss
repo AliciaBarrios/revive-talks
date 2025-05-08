@@ -115,7 +115,9 @@
       margin-top: 2rem;
       font-weight: bold;
       border: none;
-      transition: background-color 0.3s ease, color 0.8s ease;
+      transition:
+        background-color 0.3s ease,
+        color 0.8s ease;
 
       &:hover {
         color: hwb(0 100% 0%);
@@ -126,7 +128,6 @@
 }
 
 @supports (display: grid) {
-
   .home-page .content {
     z-index: z(content);
     display: grid;
@@ -152,6 +153,7 @@
 
     .content__comentarios {
       display: grid;
+      grid-area: comentarios;
       grid-template-areas:
         "comentario-1"
         "comentario-2"
@@ -161,7 +163,6 @@
         "comentario-6"
         "comentario-7";
       grid-template-columns: 1fr;
-      grid-area: comentarios;
 
       .comentario-1 {
         grid-area: comentario-1;
@@ -195,7 +196,6 @@
 }
 
 @container home (min-width: 900px) {
-
   .home-page .content .content__comentarios {
     // Fallback para navegadores que no soportan CSS Grid
     display: flex;
@@ -204,7 +204,6 @@
   }
 
   @supports (display: grid) {
-
     .home-page .content .content__comentarios {
       display: grid;
       grid-template-areas:

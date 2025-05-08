@@ -1,7 +1,6 @@
 @use "sass:color";
 
 @layer layout {
-  
   .hero {
     position: relative;
     display: flex;
@@ -176,7 +175,6 @@
     }
 
     @container (min-width: 900px) {
-
       .intro {
         grid-template-columns: 2fr 2fr;
       }
